@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -69,10 +70,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "front-end:build:production"
+              "browserTarget": "front-end:build:production",
+              "proxyConfig": "src/proxy.conf.js"
             },
             "development": {
-              "browserTarget": "front-end:build:development"
+              "browserTarget": "front-end:build:development",
+              "proxyConfig": "src/proxy.conf.js"
             }
           },
           "defaultConfiguration": "development"
@@ -96,6 +99,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -103,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
